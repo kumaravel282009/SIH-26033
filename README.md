@@ -30,7 +30,7 @@ Benefits:
 
 ## Proposed Solution
 1. Detailed explanation of the proposed solution:
-We propose a digital direct-selling marketplace focused initially on high-yield regional produce—specifically **Groundnuts, Corn, and Sweet Potato (Sakara Valli Kilangu)**. The platform allows farmers to list fresh harvests directly, setting fair prices without middlemen taking a cut. Buyers (retailers, food processors, and consumers) can browse, negotiate, and purchase directly.
+We propose a digital direct-selling marketplace focused on high-yield regional produce—specifically **Groundnuts, Corn, and Sweet Potato (Sakara Valli Kilangu)**. The platform allows farmers to list fresh harvests directly, setting fair prices without middlemen taking a cut. Buyers (retailers, food processors, and consumers) can browse, negotiate, and purchase directly.
 
 2. How it addresses the problem:
 For crops like sweet potatoes and corn which have high local perishability/storage needs, eliminating brokers ensures they reach buyers faster. Farmers get immediate digital payments, increasing their margins by up to 30%.
@@ -42,11 +42,20 @@ For crops like sweet potatoes and corn which have high local perishability/stora
 ## Technical Approach
 1. Technologies to be used:
 - Frontend: Flutter (Mobile App for Farmers & Buyers)
-- Backend: Node.js with Express
-- Database: MongoDB / PostgreSQL
-- Hosting: Vercel / Firebase
+- Backend: Node.js with Express & Python (FastAPI for AI)
+- Database: PostgreSQL / MongoDB
+- Hosting & Infrastructure: Vercel / Firebase / AWS
 
-2. Methodology and process for implementation:
+2. Methodology and process for implementation (Workflow Table):
+
+| Stage | Step Name | Description | Key Technologies / Actions |
+| :--- | :--- | :--- | :--- |
+| **1** | **Crop Listing** | Farmer uploads harvest details (Groundnut, Corn, Sweet Potato) | Flutter Mobile App |
+| **2** | **Smart Pricing** | AI suggests optimal price based on demand & mandi trends | Node.js & Python API |
+| **3** | **Direct Order** | Bulk buyers/consumers browse, select, and pay securely | Escrow Payment System |
+| **4** | **Auto-Logistics** | System matches the order with nearby transport providers | Vehicle Routing Algorithm |
+| **5** | **Delivery & Payout** | Fresh produce delivered directly; instant funds released to farmer | PostgreSQL & Firebase |
+
 - Step 1: Design clean, simple user flows for listing crops like corn and sweet potatoes.
 - Step 2: Develop marketplace listing, order booking, and direct messaging modules.
 - Step 3: Implement basic logistics vehicle-matching.
